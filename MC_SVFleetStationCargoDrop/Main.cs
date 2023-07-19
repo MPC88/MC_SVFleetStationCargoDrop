@@ -12,7 +12,7 @@ namespace MC_SVFleetStationCargoDrop
     {
         public const string pluginGuid = "mc.starvalor.fleetstationcargodrop";
         public const string pluginName = "SV Fleet Station Cargo Drop";
-        public const string pluginVersion = "1.0.1";
+        public const string pluginVersion = "1.0.2";
 
         public static ConfigEntry<KeyCodeSubset> cfgModifier;
         public static ConfigEntry<KeyCodeSubset> cfgCrewHotkey;
@@ -73,7 +73,7 @@ namespace MC_SVFleetStationCargoDrop
                         CargoItem cargoItem = cargo[j];
                         if(cargoItem.itemType == 5)
                         {
-                            playerCS.StoreItem(cargoItem.itemType, cargoItem.itemID, cargoItem.rarity, cargoItem.qnt, cargoItem.pricePaid, cargoItem.sellerID, currStation.id, -1, cargoItem.extraData);
+                            playerCS.StoreItem(cargoItem.itemType, cargoItem.itemID, cargoItem.rarity, cargoItem.qnt, cargoItem.pricePaid, currStation.id, -1, cargoItem.extraData);
                             num2 += cargoItem.qnt;
                             cargo.RemoveAt(j);
                             j--;
@@ -134,7 +134,7 @@ namespace MC_SVFleetStationCargoDrop
                                     stationID = currStation.id;
                                     break;
                             }
-                            ___playerCS.StoreItem(cargoItem.itemType, cargoItem.itemID, cargoItem.rarity, cargoItem.qnt, cargoItem.pricePaid, cargoItem.sellerID, stationID, -1, cargoItem.extraData);
+                            ___playerCS.StoreItem(cargoItem.itemType, cargoItem.itemID, cargoItem.rarity, cargoItem.qnt, cargoItem.pricePaid, stationID, -1, cargoItem.extraData);
                             num2 += cargoItem.qnt;
                             cargo.RemoveAt(j);
                             j--;
